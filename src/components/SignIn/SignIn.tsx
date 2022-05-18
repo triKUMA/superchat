@@ -1,9 +1,14 @@
-import { GoogleAuthProvider } from "firebase/auth";
+import { Auth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import "./styles/SignIn.css";
 
-function SignIn() {
+interface SignInProps {
+  auth: Auth;
+}
+
+function SignIn(props: SignInProps) {
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
+    signInWithPopup(props.auth, provider);
   };
 
   return (
