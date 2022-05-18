@@ -1,7 +1,16 @@
+import { GoogleAuthProvider } from "firebase/auth";
 import "./styles/SignIn.css";
 
 function SignIn() {
-  return <div className="signIn"></div>;
+  const signInWithGoogle = () => {
+    const provider = new GoogleAuthProvider();
+  };
+
+  return (
+    <button className="signIn" onClick={signInWithGoogle}>
+      Sign in with Google
+    </button>
+  );
 }
 
 export default SignIn;
