@@ -1,1 +1,46 @@
-/*# sourceMappingURL=ChatRoom.css.map */
+.chatRoom {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.chatRoom .chatRoom-feed {
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block: 0.5rem;
+}
+.chatRoom .chatRoom-form {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem;
+  border-top: 2px solid rgba(255, 255, 255, 0.25);
+}
+.chatRoom .chatRoom-form > * {
+  height: 2rem;
+}
+.chatRoom .chatRoom-form > input {
+  width: 100%;
+  padding-inline: 0.25rem;
+  border-radius: 4px 0px 0px 4px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-right: none;
+  background-color: black;
+  color: white;
+  outline: none;
+}
+.chatRoom .chatRoom-form > button {
+  width: 3rem;
+  border-radius: 0px 4px 4px 0px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  cursor: pointer;
+}
+.chatRoom .chatRoom-form > button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.chatRoom .chatRoom-form > button:active {
+  background-color: rgba(255, 255, 255, 0.35);
+}/*# sourceMappingURL=ChatRoom.css.map */

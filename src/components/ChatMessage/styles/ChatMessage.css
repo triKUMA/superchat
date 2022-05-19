@@ -1,1 +1,23 @@
-/*# sourceMappingURL=ChatMessage.css.map */
+.message {
+  width: 100%;
+  display: flex;
+  padding-block: 0.25rem;
+}
+.message:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.message > img {
+  border-radius: 10rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-inline: 0.5rem;
+}
+.message .user {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=ChatMessage.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"ChatMessage.css"}
+{"version":3,"sources":["ChatMessage.scss","ChatMessage.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,aAAA;EACA,sBAAA;ACCF;ADCE;EACE,0CAAA;ACCJ;ADEE;EACE,oBAAA;EAEA,aADO;EAEP,cAFO;EAGP,qBAAA;ACDJ;ADIE;EACE,iBAAA;EACA,gBAAA;EACA,+BAAA;EACA,yBAAA;KAAA,sBAAA;MAAA,qBAAA;UAAA,iBAAA;ACFJ","file":"ChatMessage.css"}

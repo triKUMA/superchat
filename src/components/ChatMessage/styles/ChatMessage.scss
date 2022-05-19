@@ -1,0 +1,24 @@
+.message {
+  width: 100%;
+  display: flex;
+  padding-block: 0.25rem;
+
+  &:hover {
+    background-color: rgba(white, 0.1);
+  }
+
+  & > img {
+    border-radius: 10rem;
+    $size: 2.5rem;
+    width: $size;
+    height: $size;
+    margin-inline: 0.5rem;
+  }
+
+  .user {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(white, 0.5);
+    user-select: none;
+  }
+}

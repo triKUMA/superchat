@@ -22,7 +22,7 @@ function ChatRoom(props: ChatRoomProps) {
   const dummy = useRef() as React.MutableRefObject<HTMLDivElement | null>;
 
   const messagesRef = collection(props.db, "messages");
-  const q = query(messagesRef, orderBy("createdAt"), limit(25));
+  const q = query(messagesRef, orderBy("createdAt", "desc"), limit(25));
 
   const [messages] = useCollectionData(q);
 
@@ -30,6 +30,8 @@ function ChatRoom(props: ChatRoomProps) {
 
   const sendMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (formValue === "") return;
 
     const { uid, photoURL } = props.auth.currentUser!;
 
@@ -48,6 +50,8 @@ function ChatRoom(props: ChatRoomProps) {
   return (
     <div className="chatRoom">
       <main className="chatRoom-feed">
+        <div ref={dummy}></div>
+
         {messages &&
           messages.map((msg) => (
             <ChatMessage
@@ -56,8 +60,6 @@ function ChatRoom(props: ChatRoomProps) {
               currentUserID={props.auth.currentUser!.uid}
             />
           ))}
-
-        <div ref={dummy}></div>
       </main>
 
       <form className="chatRoom-form" onSubmit={sendMessage}>
