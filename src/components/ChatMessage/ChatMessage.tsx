@@ -4,12 +4,20 @@ import "./styles/ChatMessage.css";
 interface ChatMessageProps {
   key: number;
   message: DocumentData;
+  currentUserID: string | undefined;
 }
 
 function ChatMessage(props: ChatMessageProps) {
-  const { text, uid } = props.message;
+  const { text, uid, photoURL } = props.message;
 
-  return <p className="chatMessage">{text}</p>;
+  const messageClass = uid === props.currentUserID ? "sent" : "received";
+
+  return (
+    <div className={`message ${messageClass}`}>
+      <img src={photoURL} alt="" />
+      <p>{text}</p>
+    </div>
+  );
 }
 
 export default ChatMessage;

@@ -10,9 +10,11 @@ import {
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { DataOptions } from "react-firebase-hooks/firestore/dist/firestore/types";
 import ChatMessage from "../ChatMessage/ChatMessage";
+import { Auth } from "firebase/auth";
 
 interface ChatRoomProps {
   db: Firestore;
+  auth: Auth;
 }
 
 function ChatRoom(props: ChatRoomProps) {
@@ -25,7 +27,13 @@ function ChatRoom(props: ChatRoomProps) {
     <>
       <div className="chatRoom">
         {messages &&
-          messages.map((msg) => <ChatMessage key={msg.id} message={msg} />)}
+          messages.map((msg) => (
+            <ChatMessage
+              key={msg.id}
+              message={msg}
+              currentUserID={props.auth.currentUser?.uid}
+            />
+          ))}
       </div>
     </>
   );

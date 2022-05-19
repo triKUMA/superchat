@@ -29,7 +29,11 @@ function App() {
       <header className="App-header"></header>
 
       <section>
-        {user ? <ChatRoom db={firestore} /> : <SignIn auth={auth} />}
+        {user ? (
+          <ChatRoom db={firestore} auth={auth} />
+        ) : (
+          <SignIn auth={auth} />
+        )}
       </section>
     </div>
   );
