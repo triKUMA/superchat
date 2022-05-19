@@ -4,7 +4,7 @@ import "./styles/ChatMessage.css";
 interface ChatMessageProps {
   key: number;
   message: DocumentData;
-  currentUserID: string | undefined;
+  currentUserID: string;
 }
 
 function ChatMessage(props: ChatMessageProps) {
