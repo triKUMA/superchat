@@ -9,10 +9,11 @@
 
   & > img {
     border-radius: 10rem;
-    $size: 2.5rem;
+    $size: 2rem;
     width: $size;
     height: $size;
     margin-inline: 0.5rem;
+    margin-top: 0.275rem;
   }
 
   .user {

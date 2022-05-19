@@ -8,9 +8,10 @@
 }
 .message > img {
   border-radius: 10rem;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   margin-inline: 0.5rem;
+  margin-top: 0.275rem;
 }
 .message .user {
   font-size: 0.9rem;
